@@ -1,0 +1,21 @@
+/* h1 {
+    background-color: brown;
+    color: chocolate;
+}
+
+p {
+    background-color: aqua;
+    color: blueviolet;
+}
+
+h1, p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+    background-image: linear-gradient(to right, #55eec8, #09aa23); 
+    background-size: cover;
+    margin: 0;
+    padding: 10px;
+    
+} */
