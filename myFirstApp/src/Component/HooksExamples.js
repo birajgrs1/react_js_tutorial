@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 // const[count, setCount] = useState(0);
 
@@ -14,7 +14,9 @@ const App = () => {
         Profession: "Full Stack Developer"   
     });
 
-    const [seconds, setSeconds] = useState(0); // Timer state
+    const [seconds, setSeconds] = useState(0); 
+
+    const formRef = useRef(null); 
 
     const handleClick = () => {
         // text = "Hello, Everyone!";
@@ -39,11 +41,26 @@ const App = () => {
         console.log("The 'datas' state has changed:", datas);
     }, [datas]);
 
-    // Timer functionality using useEffect
     useEffect(() => {
         const interval = setInterval(() => setSeconds((s) => s + 1), 1000);
         return () => clearInterval(interval); 
     }, []);
+
+    const handleSubmit = (e) => {
+        e.preventDefault(); 
+        const formData = new FormData(formRef.current);
+        const name = formData.get("name");
+        const email = formData.get("email");
+        const contact = formData.get("contact");
+        const profession = formData.get("profession");
+
+        setData({
+            name,
+            email,
+            contact: Number(contact), 
+            Profession: profession
+        });
+    };
 
     return (
         <div>
@@ -51,8 +68,28 @@ const App = () => {
             <p>
                 Name: {datas.name}, Email: {datas.email}, Contact: {datas.contact}, Profession: {datas.Profession}
             </p>
-            <h3>Timer: {seconds} seconds</h3> {/* Displaying the timer */}
+            <h3>Timer: {seconds} seconds</h3> 
             <button onClick={handleClick}>Click Me</button>
+
+            <form ref={formRef} onSubmit={handleSubmit}>
+                <div>
+                    <label>Name: </label>
+                    <input type="text" name="name" defaultValue={datas.name} />
+                </div>
+                <div>
+                    <label>Email: </label>
+                    <input type="email" name="email" defaultValue={datas.email} />
+                </div>
+                <div>
+                    <label>Contact: </label>
+                    <input type="text" name="contact" defaultValue={datas.contact} />
+                </div>
+                <div>
+                    <label>Profession: </label>
+                    <input type="text" name="profession" defaultValue={datas.Profession} />
+                </div>
+                <button type="submit">Update</button>
+            </form>
         </div>
     );
 };
