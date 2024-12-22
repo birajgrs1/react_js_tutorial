@@ -16,14 +16,12 @@ const reducer = (state, action) => {
 };
 
 const UseReducerDemo = () => {
-  //     Syntax:
-  // const [state, dispatch] = useReducer(reducer, initialArgs, init);
 
   const [count, dispatch] = useReducer(reducer, initialState);
 
   return (
     <>
-      <h5>Count: {count}</h5>
+      <h5>Counter: {count}</h5>
       <button onClick={() => dispatch("Increment")}>Increment</button>
       <button onClick={() => dispatch("Decrement")}>Decrement</button>
       <button onClick={() => dispatch("Reset")}>Reset</button>
