@@ -2,11 +2,14 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 // import UseStateDemo from "./Components/useState/UseStateHookDemo";
 import React from "react";
-import UseRefHookDemo from "./Components/useRef/UseRefHookDemo";
+import Parent from "./Components/propdrilling/Parent";
+// import UseRefHookDemo from "./Components/useRef/UseRefHookDemo";
 // import UseEffectDemo from "./Components/useEffect/UseEffectComponentDemo";
 // import UseReducerDemo from "./Components/useReducer/UseReducerHookDemo";
 
 function App() {
+
+
 
   return (
     <>
@@ -14,7 +17,11 @@ function App() {
      {/* <UseStateDemo></UseStateDemo> */}
      {/* <UseReducerDemo></UseReducerDemo> */}
      {/* <UseEffectDemo></UseEffectDemo> */}
-     <UseRefHookDemo></UseRefHookDemo>
+     {/* <UseRefHookDemo></UseRefHookDemo> */}
+
+     {/* Understanding concept of prop drilling */}
+     <Parent />
+
     </>
   );
 }
