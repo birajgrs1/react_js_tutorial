@@ -2,7 +2,8 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 // import UseStateDemo from "./Components/useState/UseStateHookDemo";
 import React from "react";
-import CallbackHookDemo from "./Components/callbackHooks/useCallback/UsingCallbackHook";
+import UseMemoDemo from "./Components/useMemo/UseMemoHook";
+// import CallbackHookDemo from "./Components/callbackHooks/useCallback/UsingCallbackHook";
 // import WithoutCallback from "./Components/problem_without_callback/WithoutCallback";
 // import Parent from "./Components/useContext/Parent";
 // import Parent from "./Components/propdrilling/Parent";
@@ -33,7 +34,10 @@ function App() {
      {/* Without Callback */}
      {/* <WithoutCallback></WithoutCallback> */}
      {/* With Callback */}
-     <CallbackHookDemo></CallbackHookDemo>
+     {/* <CallbackHookDemo></CallbackHookDemo> */}
+
+     {/* UseMemo hook */}
+     <UseMemoDemo></UseMemoDemo>
 
     </>
   );
