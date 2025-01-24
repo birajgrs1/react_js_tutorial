@@ -1,0 +1,14 @@
+.sidebar {
+    border: 1px solid #ddd;
+    padding: 16px;
+  }
+  
+  .categoryItem {
+    cursor: pointer;
+    padding: 8px;
+  }
+  
+  .categoryItem:hover {
+    background-color: lightgray;
+  }
+  

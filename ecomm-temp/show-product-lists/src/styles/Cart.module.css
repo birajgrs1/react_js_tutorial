@@ -1,0 +1,16 @@
+.cart {
+    border: 1px solid #ddd;
+    padding: 80px;
+  }
+  
+  .cartItem {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+  }
+  
+  .trashIcon {
+    cursor: pointer;
+    color: red;
+  }
+  
